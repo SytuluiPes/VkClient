@@ -1,4 +1,4 @@
-package ru.artem.vkclient.ui
+package ru.artem.vkclient.ui.h2s3
 
 import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.background

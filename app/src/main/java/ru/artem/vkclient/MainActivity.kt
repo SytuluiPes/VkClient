@@ -3,13 +3,14 @@ package ru.artem.vkclient
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
-import ru.artem.vkclient.ui.TimesTable
+import ru.artem.vkclient.ui.h2s4.InstagramProfile
+import ru.artem.vkclient.ui.h2s4.InstagramProfileViewModel
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
-            TimesTable(n = 7)
+            InstagramProfile(viewModel = InstagramProfileViewModel())
         }
     }
 }
