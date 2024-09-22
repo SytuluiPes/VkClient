@@ -7,5 +7,5 @@ data class SocialProfileModel(
     val posts: Long,
     val followers: Long,
     val following: Long,
-    val status: String,
+    val status: String?,
 )

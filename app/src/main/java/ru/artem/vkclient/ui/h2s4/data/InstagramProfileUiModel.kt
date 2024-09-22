@@ -22,5 +22,5 @@ fun SocialProfileModel.asInstagramProfileUiModel() =
         posts = this.posts.toString(),
         followers = this.followers.toString(),
         following = this.following.toString(),
-        status = this.status,
+        status = this.status ?: "",
     )
