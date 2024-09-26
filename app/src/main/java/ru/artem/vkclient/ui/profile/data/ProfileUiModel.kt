@@ -1,8 +1,8 @@
-package ru.artem.vkclient.ui.h2s4.data
+package ru.artem.vkclient.ui.profile.data
 
-import ru.artem.vkclient.data.Gender.Male.asString
-import ru.artem.vkclient.data.SocialProfileModel
-import ru.artem.vkclient.data.asString
+import ru.artem.vkclient.core.data.SocialProfileModel
+import ru.artem.vkclient.core.data.asString
+import ru.artem.vkclient.core.util.orDash
 
 data class InstagramProfileUiModel(
     val nickname: String,
@@ -18,9 +18,9 @@ fun SocialProfileModel.asInstagramProfileUiModel() =
     InstagramProfileUiModel(
         nickname = this.nickname,
         name = this.userName.asString(),
-        gender = this.gender.asString(),
+        gender = this.gender.sex,
         posts = this.posts.toString(),
         followers = this.followers.toString(),
         following = this.following.toString(),
-        status = this.status ?: "",
+        status = this.status.orDash(),
     )

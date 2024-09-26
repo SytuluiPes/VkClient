@@ -1,4 +1,4 @@
-package ru.artem.vkclient.ui.h2s4
+package ru.artem.vkclient.ui.profile
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
@@ -27,7 +27,7 @@ import ru.artem.vkclient.core.ui.theme.forDark
 
 @Composable
 fun InstagramProfile(
-    viewModel: InstagramProfileViewModel
+    viewModel: ProfileViewModel
 ) {
     val profileUiModel = checkNotNull(viewModel.profileUiModel)
     Column(
@@ -170,5 +170,5 @@ private fun StatisticCell(
 @ThemePreview
 @Composable
 private fun InstagramHeaderPreview() {
-    InstagramProfile(viewModel = InstagramProfileViewModel())
+    InstagramProfile(viewModel = ProfileViewModel())
 }
