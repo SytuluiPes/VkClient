@@ -1,16 +1,16 @@
-package ru.artem.vkclient.ui.h2s4
+package ru.artem.vkclient.ui.profile
 
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.setValue
 import androidx.lifecycle.ViewModel
-import ru.artem.vkclient.data.Gender
-import ru.artem.vkclient.data.SocialProfileModel
-import ru.artem.vkclient.data.UserName
-import ru.artem.vkclient.ui.h2s4.data.InstagramProfileUiModel
-import ru.artem.vkclient.ui.h2s4.data.asInstagramProfileUiModel
+import ru.artem.vkclient.core.data.Gender
+import ru.artem.vkclient.core.data.SocialProfileModel
+import ru.artem.vkclient.core.data.UserName
+import ru.artem.vkclient.ui.profile.data.InstagramProfileUiModel
+import ru.artem.vkclient.ui.profile.data.asInstagramProfileUiModel
 
-class InstagramProfileViewModel : ViewModel() {
+class ProfileViewModel : ViewModel() {
 
     var profileUiModel: InstagramProfileUiModel? by mutableStateOf(null)
 

@@ -9,4 +9,8 @@
 
     <string name="description_add">add</string>
 
+    <string name="log_in">Log In</string>
+    <string name="login_hint">Phone number, username, or email</string>
+    <string name="password_hint">Password</string>
+
 </resources>

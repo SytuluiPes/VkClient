@@ -1,4 +1,4 @@
-package ru.artem.vkclient.ui.h2s4
+package ru.artem.vkclient.ui.profile
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
@@ -27,14 +27,14 @@ import ru.artem.vkclient.core.ui.theme.forDark
 
 @Composable
 fun InstagramProfile(
-    viewModel: InstagramProfileViewModel
+    viewModel: ProfileViewModel
 ) {
     val profileUiModel = checkNotNull(viewModel.profileUiModel)
     Column(
         modifier = Modifier
             .fillMaxSize()
             .background(Color.White forDark Color.Black)
-            .padding(top = 20.dp)
+            .padding(vertical = 20.dp, horizontal = 15.dp)
     ) {
         NameProfile(nickname = profileUiModel.nickname)
         InstagramHeader(
@@ -74,8 +74,7 @@ private fun InstagramHeader(
     Row(
         modifier = Modifier
             .height(140.dp)
-            .fillMaxWidth()
-            .padding(horizontal = 15.dp, vertical = 10.dp),
+            .fillMaxWidth(),
         verticalAlignment = Alignment.CenterVertically,
         horizontalArrangement = Arrangement.spacedBy(30.dp)
     ) {
@@ -122,30 +121,27 @@ private fun StatisticAccount(
 private fun Status(
     name: String,
     gender: String,
-    status: String?,
+    status: String,
 ) {
-    Column(
-        modifier = Modifier.fillMaxSize()
+    Row(
+        modifier = Modifier.height(20.dp)
     ) {
-        Row {
-            Text(
-                text = name,
-                fontWeight = FontWeight.Bold
-            )
-            SpacerHorizontal(width = 5.dp)
-            Text(
-                text = gender,
-                color = Color.Gray,
-                fontSize = 11.sp,
-            )
-        }
-        status?.let {
-            Text(
-                text = it,
-                maxLines = 3,
-            )
-        }
+        Text(
+            text = name,
+            fontWeight = FontWeight.Bold,
+            color = Color.Black forDark Color.White,
+        )
+        SpacerHorizontal(width = 5.dp)
+        Text(
+            text = gender,
+            color = Color.Gray forDark Color.LightGray,
+        )
     }
+    Text(
+        text = status,
+        fontSize = 12.sp,
+        maxLines = 3,
+    )
 }
 
 @Composable
@@ -174,5 +170,5 @@ private fun StatisticCell(
 @ThemePreview
 @Composable
 private fun InstagramHeaderPreview() {
-
+    InstagramProfile(viewModel = ProfileViewModel())
 }

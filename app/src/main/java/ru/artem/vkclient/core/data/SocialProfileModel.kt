@@ -1,4 +1,4 @@
-package ru.artem.vkclient.data
+package ru.artem.vkclient.core.data
 
 data class SocialProfileModel(
     val nickname: String,
@@ -7,5 +7,5 @@ data class SocialProfileModel(
     val posts: Long,
     val followers: Long,
     val following: Long,
-    val status: String,
+    val status: String?,
 )
